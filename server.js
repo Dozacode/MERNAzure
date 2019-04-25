@@ -14,7 +14,7 @@ app.get('/*', (req, res) => {
 // the asterisk is very important!! as it allows client side routing
 // with react-router or w/e client side routing package you use
 
+app.use('/api/thoughts/', require('./server/routes/thoughts-route'));
+
 const {PORT} = process.env;
 app.listen(PORT, () => console.log(`Working like a champ on port ${PORT}`));
-
-//test
